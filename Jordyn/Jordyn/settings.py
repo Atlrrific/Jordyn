@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'DEFAULT_PERMISSION_CLASSES': (),
     'PAGE_SIZE': 10
 }
 MIDDLEWARE_CLASSES = [
@@ -82,9 +82,13 @@ WSGI_APPLICATION = 'Jordyn.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+      'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1nfl6pdijb10a',
+        'USER': 'dvnvvauloazbbm',
+        'PASSWORD': 'oPEj-CMJautxi6gK-4X4MzCv90',
+        'HOST': 'ec2-54-227-240-164.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 

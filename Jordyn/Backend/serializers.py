@@ -1,9 +1,8 @@
-from django.contrib.auth.models import Instruction
 from rest_framework import serializers
+from Backend.models import *
 
 
-
-class Instruction(serializers.HyperlinkedModelSerializer):
+class InstructionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Group
-        fields = ('spice', 'quantity','pub_date')
+        model = Instruction
+        fields = ('id','spice', 'quantity')
